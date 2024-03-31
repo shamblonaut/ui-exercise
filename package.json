@@ -1,5 +1,5 @@
 {
-  "name": "webpack-template",
+  "name": "ui-exercise",
   "version": "1.0.0",
   "description": "",
   "private": "true",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shamblonaut/webpack-template.git"
+    "url": "git+https://github.com/shamblonaut/ui-exercise.git"
   },
   "author": "Shamblonaut",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shamblonaut/webpack-template/issues"
+    "url": "https://github.com/shamblonaut/ui-exercise/issues"
   },
-  "homepage": "https://github.com/shamblonaut/webpack-template#readme",
+  "homepage": "https://github.com/shamblonaut/ui-exercise#readme",
   "devDependencies": {
     "css-loader": "^6.10.0",
     "html-loader": "^5.0.0",

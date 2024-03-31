@@ -1,1 +1,1 @@
-# webpack-template
+# ui-exercise
