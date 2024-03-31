@@ -3,9 +3,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    index: "./src/index.js",
+    "drop-down": "./src/drop-down/index.js",
+    "mobile-menu": "./src/mobile-menu/index.js",
+    "image-slider": "./src/image-slider/index.js",
+  },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
@@ -28,12 +33,30 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/html/index.html",
+      template: "./src/index.html",
       filename: "index.html",
-      inject: "body",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/drop-down/index.html",
+      filename: "drop-down/index.html",
+      chunks: ["drop-down"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/mobile-menu/index.html",
+      filename: "mobile-menu/index.html",
+      chunks: ["mobile-menu"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/image-slider/index.html",
+      filename: "image-slider/index.html",
+      chunks: ["image-slider"],
     }),
   ],
 
   mode: "development",
   devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+  },
 };
