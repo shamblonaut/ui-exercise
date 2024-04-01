@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: deepskyblue;
+}
+
+.tab {
+  text-align: center;
+  font-size: 0.8rem;
+
+  position: relative;
+}
+
+.tab > button {
+  width: 100%;
+  height: 100%;
+  padding: 16px 0;
+}
+
+.tab:not(.active) > button:hover > img {
+  filter: invert(51%) sepia(14%) saturate(0%) hue-rotate(193deg) brightness(96%) contrast(92%);
+}
+
+.tab.active > button > img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(100deg) brightness(100%) contrast(100%);
+}
+
+.alert-circle {
+  background-color: red;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: calc(50% + 2px);
+}
+
+.drop-down {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  background-color: skyblue;
+  padding: 8px;
+  margin: 8px;
+  min-width: max(100%, 150px);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+  transition: all ease-in-out 250ms;
+}
+
+.drop-down.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.drop-down-item {
+  padding: 8px;
+  border-radius: 4px;
+  text-align: start;
+}
+
+.drop-down-item:hover {
+  background-color: lightskyblue;
+}
