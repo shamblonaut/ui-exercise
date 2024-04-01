@@ -1,6 +1,7 @@
 const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -23,7 +24,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        // use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -32,24 +34,29 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
+      inject: "head",
       chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/drop-down/index.html",
       filename: "drop-down/index.html",
+      inject: "head",
       chunks: ["drop-down"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/mobile-menu/index.html",
       filename: "mobile-menu/index.html",
+      inject: "head",
       chunks: ["mobile-menu"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/image-slider/index.html",
       filename: "image-slider/index.html",
+      inject: "head",
       chunks: ["image-slider"],
     }),
   ],

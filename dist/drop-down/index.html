@@ -4,8 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drop-down Menu</title>
-<script defer src="../drop-down.js"></script></head>
+<script defer src="../drop-down.js"></script><link href="../drop-down.css" rel="stylesheet"></head>
 <body>
-  <h1>Hello Drop Down!</h1>
+  <div class="menu-bar">
+    <div class="file">
+      <button class="menu-title">File</button>
+      <div class="drop-down">
+        <button class="drop-down-item">New</button>
+        <button class="drop-down-item">Open</button>
+        <button class="drop-down-item">Save</button>
+        <button class="drop-down-item">Save as...</button>
+        <div class="drop-down-divider"></div>
+        <button class="drop-down-item">Print</button>
+        <button class="drop-down-item">Page Setup</button>
+        <div class="drop-down-divider"></div>
+        <button class="drop-down-item">Exit</button>
+      </div>
+    </div>
+    <div class="edit">
+      <button class="menu-title">Edit</button>
+      <div class="drop-down">
+        <button class="drop-down-item">Undo</button>
+        <div class="drop-down-divider"></div>
+        <button class="drop-down-item">Cut</button>
+        <button class="drop-down-item">Copy</button>
+        <button class="drop-down-item">Paste</button>
+        <button class="drop-down-item">Delete</button>
+        <div class="drop-down-divider"></div>
+        <button class="drop-down-item">Font</button>
+      </div>
+    </div>
+    <div class="search">
+      <button class="menu-title">Search</button>
+      <div class="drop-down">
+        <button class="drop-down-item">Search</button>
+        <button class="drop-down-item">Search Next</button>
+        <button class="drop-down-item">Replace</button>
+        <button class="drop-down-item">Go To</button>
+      </div>
+    </div>
+    <div class="help">
+      <button class="menu-title">Help</button>
+      <div class="drop-down">
+        <button class="drop-down-item">FAQ</button>
+        <button class="drop-down-item">Support</button>
+        <button class="drop-down-item">About</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
