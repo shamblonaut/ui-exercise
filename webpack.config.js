@@ -37,7 +37,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "index.html",
+      filename: "ui-exercise/index.html",
       inject: "head",
       chunks: ["index"],
     }),
