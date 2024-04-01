@@ -43,19 +43,19 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/drop-down/index.html",
-      filename: "drop-down/index.html",
+      filename: "ui-exercise/drop-down/index.html",
       inject: "head",
       chunks: ["drop-down"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/mobile-menu/index.html",
-      filename: "mobile-menu/index.html",
+      filename: "ui-exercise/mobile-menu/index.html",
       inject: "head",
       chunks: ["mobile-menu"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/image-slider/index.html",
-      filename: "image-slider/index.html",
+      filename: "ui-exercise/image-slider/index.html",
       inject: "head",
       chunks: ["image-slider"],
     }),
